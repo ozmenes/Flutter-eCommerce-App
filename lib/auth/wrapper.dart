@@ -14,7 +14,7 @@ class _WrapperState extends State<Wrapper> {
   int userID=1;
   @override
   Widget build(BuildContext context) {
-    if(userID >0){
+    if(userID >1){
       return const DashboardPage();
     }else{
       return const Authenticate();
