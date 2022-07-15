@@ -162,7 +162,6 @@ class _RegisterPageState extends State<RegisterPage> {
                       FlatButton(
                         onPressed: () {
                           if (validateAndSave()) {
-
                             setState(() {
                               isApiCallProcess = true;
                             });

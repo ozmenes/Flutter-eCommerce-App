@@ -11,10 +11,12 @@ class Wrapper extends StatefulWidget {
 }
 
 class _WrapperState extends State<Wrapper> {
-  int userID=1;
+  dynamic userID;
   @override
   Widget build(BuildContext context) {
-    if(userID >1){
+    //userID= 1;
+    debugPrint("userID => "+userID.toString());
+    if(userID != null) {
       return const DashboardPage();
     }else{
       return const Authenticate();
