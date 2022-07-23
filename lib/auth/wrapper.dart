@@ -1,4 +1,4 @@
-import 'package:ecommerce_flutter_app/pages/dashboard.page.dart';
+import 'package:ecommerce_flutter_app/pages/dashboard/dashboard.page.dart';
 import 'package:flutter/material.dart';
 
 import 'authentication.dart';
@@ -14,7 +14,7 @@ class _WrapperState extends State<Wrapper> {
   dynamic userID;
   @override
   Widget build(BuildContext context) {
-    //userID= 1;
+    userID= 1;
     debugPrint("userID => "+userID.toString());
     if(userID != null) {
       return const DashboardPage();
