@@ -14,7 +14,7 @@ class _DashboardProductsState extends State<DashboardProducts> {
     return Container(
       height: 600,
       width: _size.width,
-      color: Colors.brown,
+      color: Colors.blue,
     );
   }
 }
