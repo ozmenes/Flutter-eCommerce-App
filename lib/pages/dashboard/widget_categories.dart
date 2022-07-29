@@ -1,3 +1,4 @@
+import 'package:ecommerce_flutter_app/pages/products/products_page.dart';
 import 'package:flutter/material.dart';
 
 class WidgetCategories extends StatefulWidget {
@@ -20,36 +21,48 @@ class _WidgetCategoriesState extends State<WidgetCategories> {
           return AspectRatio(
             aspectRatio: 1,
             child: InkWell(
-              onTap: () {},
+              onTap: () {
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (builder) => const ProductsPage()));
+              },
               child: Container(
                 margin: const EdgeInsets.only(right: 6),
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(90),
                   image: const DecorationImage(
                     fit: BoxFit.cover,
-                    image: NetworkImage("https://i.morioh.com/2021/07/28/6b7ee0a2.webp"),
+                    image: NetworkImage(
+                        "https://i.morioh.com/2021/07/28/6b7ee0a2.webp"),
                   ),
                 ),
                 child: Container(
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(16),
-
                   ),
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.end,
                     children: [
                       Padding(
                         padding: const EdgeInsets.symmetric(horizontal: 4),
-                        child: Text(categories[index].toString(),style: const TextStyle(color: Colors.white,fontWeight: FontWeight.bold,fontSize: 14),),
+                        child: Text(
+                          categories[index].toString(),
+                          style: const TextStyle(
+                              color: Colors.white,
+                              fontWeight: FontWeight.bold,
+                              fontSize: 14),
+                        ),
                       ),
-                      const SizedBox(height: 16,)
+                      const SizedBox(
+                        height: 16,
+                      )
                     ],
                   ),
                 ),
               ),
             ),
           );
-        }
-    );
+        });
   }
 }
